@@ -1,40 +1,18 @@
-Processing Challenge - 4 Balls
-
-- 4 balls move from left to right
-- Ball 1 is at 1/5 height from the top, with the speed of 1 units per frame
-- Ball 2 is at 2/5 height from the top, with the speed of 2 units per frame
-- Ball 3 is at 3/5 height from the top, with the speed of 3 units per frame
-- Ball 4 is at 4/5 height from the top, with the speed of 4 units per frame
-
-- Attempt 1 >> Procedurally
-- Attempt 2 >> OOP
 
 
-@Override
-    public void settings() {
-        super.settings();
-        size(WIDTH, HEIGHT);
-    }
+Approach:
 
-    @Override
-    public void setup() {
-        super.setup();
-//        System.out.println("Printed from the setup method");
-//        ellipse(WIDTH / 2, HEIGHT /2, 100, 100);
-    }
+- Created a class called "Ball.java" 
+- Used constructors with 3 parameters
+    - position
+    - distance
+    - speed
+- Used getters and setters to provide access to the private instance variables and return/modify values assigned to the variables.
 
-    @Override
-    public void draw() {
-        paintBlue();
-        drawCircle();
+- Created another file with class FourBalls which extends PApplet class
+- Created public constants HEIGHT, WIDTH of the app and DIAMETER of the balls , then an instance of FourBalls (fb) that runs the sketch using PApplet.runSketch.
+- Four Ball objects (b1, b2, b3, b4) with different initial positions, distances, and speeds.
+- drawBall method draws a ball at a specified position and distance from the top-left corner of the window using ellipse().
+-draw() method to repeatedly call and update visual display of balls.
 
-    }
 
-    private void drawCircle() {
-        ellipse(x, WIDTH / 2, DIAMETER, DIAMETER);
-        x ++;
-    }
-
-    private void paintBlue() {
-        background(58, 141,189);
-    }
