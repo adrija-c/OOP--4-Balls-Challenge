@@ -1,0 +1,40 @@
+Processing Challenge - 4 Balls
+
+- 4 balls move from left to right
+- Ball 1 is at 1/5 height from the top, with the speed of 1 units per frame
+- Ball 2 is at 2/5 height from the top, with the speed of 2 units per frame
+- Ball 3 is at 3/5 height from the top, with the speed of 3 units per frame
+- Ball 4 is at 4/5 height from the top, with the speed of 4 units per frame
+
+- Attempt 1 >> Procedurally
+- Attempt 2 >> OOP
+
+
+@Override
+    public void settings() {
+        super.settings();
+        size(WIDTH, HEIGHT);
+    }
+
+    @Override
+    public void setup() {
+        super.setup();
+//        System.out.println("Printed from the setup method");
+//        ellipse(WIDTH / 2, HEIGHT /2, 100, 100);
+    }
+
+    @Override
+    public void draw() {
+        paintBlue();
+        drawCircle();
+
+    }
+
+    private void drawCircle() {
+        ellipse(x, WIDTH / 2, DIAMETER, DIAMETER);
+        x ++;
+    }
+
+    private void paintBlue() {
+        background(58, 141,189);
+    }
